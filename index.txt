@@ -1,0 +1,79 @@
+function buttonClickHandler() {
+    alert('Button clicked')
+}
+
+function buttonClickHandler2() {
+    
+}
+
+function buttonClickHandler3() {
+    alert("button 3 clicked")
+}
+
+
+const btn2 = document.getElementById("btn2")
+btn2.onclick = buttonClickHandler;
+
+
+const btn3 = document.getElementById("btn3")
+btn3.addEventListener("click", buttonClickHandler3)
+
+function Createsquare(){
+    const container = document.getElementById("SquareContainer")
+
+    const square = document.createElement("div");
+    square.style["display"] = "inline-block";
+    square.style["width"] = "200px";
+    square.style["height"] = "200px";
+    square.style["backgroundColor"] = "black";
+
+    container.appendChild(square);
+}
+
+function eventTest(e){
+    console.log(e);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="buttonClickHandler()">Click me</button>
+        <button id="btn2">Click dom</button>
+        <button id="btn3">Click listener</button>
+    </div>
+    <div id="SquareContainer">
+        <button onclick="Createsquare()">Create square</button>
+    </div>
+
+    <div>
+        <button onclick="eventTest(event)">eventTest</button>
+    </div>
+
+
+    <script src="/JS 10.07/script.js"></script>
+</body>
+</html>
